@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <!-- Aquesta línia fa que la pàgina s'adapti al mòbil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Nexus</title>
+
+  <!-- Tipografies de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- El nostre CSS -->
+  <link rel="stylesheet" href="pixel.css">
+</head>
+<body>
+
+  <!-- 1. HEADER: logotip i menú -->
+  <header>
+    <a href="index.html" class="logo">pixel nexus <small>— archive</small></a>
+
+    <nav>
+      <a href="#">Articles</a>
+      <a href="#">Català</a>
+      <a href="#" class="actiu">Blog</a>
+    </nav>
+  </header>
+
+  <!-- 2. CAPÇALERA PRINCIPAL -->
+  <section class="intro">
+    <h1>Pixel Nexus</h1>
+    <p>L'arxiu digital sobre videojocs, hardware i cultura tecnològica que connecta passat, present i futur.</p>
+  </section>
+
+  <!-- 3. TEMA DESTACAT (dues columnes: text + imatge) -->
+  <section class="destacat">
+    <div class="destacat-text">
+      <h2>Tema destacat</h2>
+      <p class="categoria">VIDEOJOCS | 2024</p>
+      <h3>Echoes of Orion</h3>
+      <p>Un viatge interestel·lar que redefineix l'exploració en els videojocs. Analitzem com Echoes of Orion combina narrativa, tecnologia i disseny de mons per crear una experiència inoblidable.</p>
+      <a href="#" class="boto">VEGEU FITXA COMPLETA →</a>
+    </div>
+
+    <div class="destacat-imatge">
+      <img src="img/echoes-of-orion.jpg" alt="Astronauta davant d'un planeta">
+    </div>
+  </section>
+
+  <!-- 4. CATEGORIES (tres targetes) -->
+  <section class="categories">
+    <h2>Explora per categories</h2>
+
+    <div class="targetes">
+
+      <a href="#" class="targeta">
+        <svg class="icona" viewBox="0 0 64 64">
+          <path d="M20 24h24c7 0 10 5 12 12l3 10c1.5 5-4 9-8 6l-8-7H21l-8 7c-4 3-9.5-1-8-6l3-10c2-7 5-12 12-12Z" />
+          <path d="M18 34h10M23 29v10" />
+          <circle cx="43" cy="33" r="2" />
+          <circle cx="49" cy="39" r="2" />
+        </svg>
+        <p>Videojocs →</p>
+      </a>
+
+      <a href="#" class="targeta">
+        <svg class="icona" viewBox="0 0 64 64">
+          <rect x="10" y="13" width="44" height="30" rx="4" />
+          <path d="M24 51h16M32 43v8M14 37h36" />
+        </svg>
+        <p>Hardware →</p>
+      </a>
+
+      <a href="#" class="targeta">
+        <svg class="icona" viewBox="0 0 64 64">
+          <rect x="17" y="17" width="30" height="30" rx="5" />
+          <path d="M23 8v9M32 8v9M41 8v9M23 47v9M32 47v9M41 47v9M8 23h9M8 32h9M8 41h9M47 23h9M47 32h9M47 41h9" />
+          <text x="32" y="37" text-anchor="middle">IA</text>
+        </svg>
+        <p>IA i Software →</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- 5. FOOTER: butlletí + enllaços + xarxes -->
+  <footer>
+
+    <!-- Columna 1: butlletí -->
+    <div class="columna butlleti">
+      <h2>Butlletí digital: no et perdis res</h2>
+      <p>Novetats, anàlisis i contingut exclusiu directament a la teva safata d'entrada.</p>
+
+      <form>
+        <input type="email" placeholder="El teu correu electrònic" required>
+
+        <label class="acceptar">
+          <input type="checkbox" required>
+          En subscriure'm, accepto rebre el butlletí de Pixel Nexus i declaro que he llegit i accepto la seva política de privacitat.
+        </label>
+
+        <button type="submit">SUBSCRIU-ME →</button>
+      </form>
+    </div>
+
+    <!-- Columna 2: enllaços -->
+    <div class="columna enllacos">
+      <a href="#">Sobre nosaltres</a>
+      <a href="#">Contacte</a>
+      <a href="#">Política de privacitat</a>
+      <a href="#">Política de cookies</a>
+      <a href="#">Avís legal</a>
+    </div>
+
+    <!-- Columna 3: xarxes i informació -->
+    <div class="columna enllacos">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">X</a>
+      <p class="projecte">INSTITUT BOSC DE LA COMA<br>Nom i cognoms de l'estudiant</p>
+    </div>
+
+  </footer>
+
+</body>
+</html>

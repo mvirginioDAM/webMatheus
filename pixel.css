@@ -1,0 +1,349 @@
+
+:root {
+  --negre: black;
+  --blanc: white;
+  --cian: cyan;
+  --gris: #e8e4e3;
+}
+
+
+/* ---------- COSES GENERALS ---------- */
+
+/* Fa que l'amplada inclogui el padding (així no es "desquadra" res) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;                         /* treu el marge blanc per defecte */
+  font-family: "Inter", sans-serif;  /* tipografia sense serif */
+  background: var(--negre);
+  color: var(--blanc);
+}
+
+a {
+  color: var(--blanc);
+  text-decoration: none;             /* treu el subratllat dels enllaços */
+}
+
+/* Tots els títols usen la tipografia amb serif */
+h1, h2, h3, .logo {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+
+/* ---------- 1. HEADER ---------- */
+
+header {
+  display: flex;                     /* posa logo i menú un al costat de l'altre */
+  justify-content: space-between;    /* logo a l'esquerra, menú a la dreta */
+  align-items: center;               /* alineats verticalment */
+  padding: 15px 60px;
+  background: var(--negre);
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.logo small {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+nav a {
+  margin-left: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;         /* text en majúscules */
+}
+
+/* L'enllaç de la pàgina actual */
+nav a.actiu {
+  color: var(--cian);
+  border-bottom: 2px solid var(--cian);
+}
+
+
+/* ---------- 2. CAPÇALERA PRINCIPAL ---------- */
+
+.intro {
+  background: var(--gris);               /* gris clar */
+  color: var(--negre);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.intro h1 {
+  font-size: 48px;
+}
+
+.intro p {
+  max-width: 450px;                  /* text estret i centrat */
+  margin: 10px auto 0 auto;
+}
+
+
+/* ---------- 3. TEMA DESTACAT ---------- */
+
+.destacat {
+  display: flex;                     /* dues columnes: text i imatge */
+  gap: 50px;                         /* espai entre les dues columnes */
+  align-items: center;
+  padding: 30px 120px;
+  background: var(--negre);
+}
+
+/* Cada columna ocupa la meitat */
+.destacat-text {
+  width: 50%;
+}
+
+.destacat-imatge {
+  width: 50%;
+}
+
+.destacat-imatge img {
+  width: 100%;                       /* la imatge s'adapta a la columna */
+  display: block;
+}
+
+.destacat h2 {
+  font-size: 30px;
+}
+
+.destacat h3 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.categoria {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* Enllaç amb aspecte de botó */
+.boto {
+  display: inline-block;             /* permet donar-li padding */
+  background: var(--cian);
+  color: var(--negre);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+
+/* ---------- 4. CATEGORIES ---------- */
+
+.categories {
+  background: var(--gris);
+  color: var(--negre);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.categories h2 {
+  font-size: 30px;
+}
+
+.targetes {
+  display: flex;                     /* les 3 targetes en fila */
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.targeta {
+  width: 200px;
+  background: var(--negre);
+  border: 1px solid var(--cian);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.targeta p {
+  text-align: left;
+  margin: 10px 0 0 0;
+}
+
+/* Estil de les icones SVG */
+.icona {
+  width: 90px;
+  height: 90px;
+  fill: none;                        /* sense omplir */
+  stroke: var(--blanc);                     /* només la línia, en blanc */
+  stroke-width: 2;
+}
+
+.icona text {
+  fill: var(--cian);
+  stroke: none;
+  font-size: 12px;
+}
+
+
+/* ---------- 5. FOOTER ---------- */
+
+footer {
+  display: flex;                     /* 3 columnes */
+  gap: 40px;
+  padding: 40px 60px;
+  background: var(--negre);
+}
+
+.columna {
+  width: 25%;
+}
+
+.butlleti {
+  width: 50%;                        /* el butlletí és més ample */
+}
+
+.butlleti h2 {
+  font-size: 22px;
+}
+
+/* Camp de correu */
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  background: var(--negre);
+  color: var(--blanc);
+  border: 1px solid var(--cian);
+  border-radius: 4px;
+}
+
+.acceptar {
+  display: block;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+/* Botó d'enviament */
+button {
+  background: var(--blanc);
+  color: var(--negre);
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;                   /* la mà quan passes el ratolí */
+}
+
+/* Enllaços del footer, un a sota de l'altre */
+.enllacos a {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.projecte {
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+
+/* =====================================================
+   TAULETA: pantalles de 900px d'amplada o menys
+   ===================================================== */
+@media (max-width: 900px) {
+
+  header {
+    padding: 15px 30px;
+  }
+
+  .destacat {
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .targeta {
+    width: 30%;                      /* les targetes s'adapten a l'espai */
+    padding: 12px;
+  }
+
+  .icona {
+    width: 70px;
+    height: 70px;
+  }
+
+  footer {
+    flex-wrap: wrap;                 /* permet que les columnes baixin */
+    padding: 30px;
+  }
+
+  .butlleti {
+    width: 100%;                     /* el butlletí ocupa tota la fila */
+  }
+
+  .columna {
+    width: 40%;
+  }
+}
+
+
+/* =====================================================
+   MÒBIL: pantalles de 600px d'amplada o menys
+   ===================================================== */
+@media (max-width: 600px) {
+
+  /* Header: logo a sobre i menú a sota */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  nav a {
+    margin: 0 15px 0 0;
+  }
+
+  .intro h1 {
+    font-size: 36px;
+  }
+
+  /* Text i imatge un a sobre de l'altre */
+  .destacat {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .destacat-text,
+  .destacat-imatge {
+    width: 100%;
+  }
+
+  /* Categories apilades */
+  .targetes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .targeta {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Footer en una sola columna */
+  footer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .columna,
+  .butlleti {
+    width: 100%;
+  }
+
+  /* Botons a tota l'amplada */
+  .boto,
+  button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
